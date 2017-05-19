@@ -1,0 +1,22 @@
+$badass: #fff;
+$awesomeness: #123;
+$ilovechocolate: #333;
+
+body {
+  margin: 0;
+  padding: 10px;
+  background-color: $badass;
+  color: $awesomeness;
+}
+
+h1 {
+  color: $ilovechocolate;
+}
+
+p {
+  color: #114477;
+}
+
+.test2-postcss {
+  display: flex;
+}

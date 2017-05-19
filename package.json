@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "learning node-sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass scss/main.scss public/css/main.css",
+    "build2-css": "node bin/build-css.js",
+    "build3-css": "node bin/build-css-again.js",
+    "build3-css:production": "NODE_ENV=production npm run build3-css",
+    "postcss": "postcss -u autoprefixer -r public/css/main.css",
+    "watch-css": "node bin/watch-css.js",
+    "start:server": "node bin/server.js"
+  },
+  "author": "heather taylor",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.0",
+    "browser-sync": "^2.18.11",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^4.0.0"
+  }
+}

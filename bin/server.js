@@ -21,11 +21,11 @@ if (process.env.NODE_ENV === 'production'){
   app.use(express.static(__dirname + '/public'));
 
   //set the home page route
-  // app.get('/', function(reques, response) {
-  //
-  //   // ejs render automatically looks in the view folder
-  //   res.render('index');
-  // });
+  app.get('/', function(reques, response) {
+
+    // ejs render automatically looks in the view folder
+    res.render('index.ejs');
+  });
 
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);

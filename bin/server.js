@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production'){
   console.log("You have accessed the production server.");
   // set the port of the application
   // process.env.PORT lets the port be set by Heroku
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 5000;
 
   // set the view engine to ejs
   app.set('view engine', 'ejs');

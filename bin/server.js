@@ -20,12 +20,12 @@ if (process.env.NODE_ENV === 'production'){
   // make epress look in the public directory for assets
   app.use(express.static(__dirname + '/public'));
 
-  set the home page route
-  app.get('/', function(reques, response) {
-
-    // ejs render automatically looks in the view folder
-    res.render('index');
-  });
+  //set the home page route
+  // app.get('/', function(reques, response) {
+  //
+  //   // ejs render automatically looks in the view folder
+  //   res.render('index');
+  // });
 
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);

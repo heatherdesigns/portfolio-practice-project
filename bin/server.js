@@ -16,8 +16,9 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
-  app.set('views', index.html)
-  app.set('view engine', 'ejs');
+  app.set('views', index.html);
+  //app.set('view engine', 'ejs');
+  app.set('view engine', 'html');
 
   // make epress look in the public directory for assets
   app.use(express.static(__dirname + '/public'));

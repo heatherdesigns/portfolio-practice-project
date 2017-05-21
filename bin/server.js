@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production'){
 
   app.get('/', function(request, response) {
     //response.render('index.html');
-    res.send('Hello World')
+    res.send('Hello World');
   });
 
   // app.listen(app.get('port'), function() {

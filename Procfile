@@ -1,1 +1,1 @@
-web: node bin/build-css-again.js
+web: node bin/server.js

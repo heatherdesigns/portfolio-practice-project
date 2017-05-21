@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === 'production'){
   //app.use(express.static(__dirname + '/public'));
 
   app.get('/', function(request, response) {
-    response.render('index.html');
+    //response.render('index.html');
+    res.send('Hello World')
   });
 
   // app.listen(app.get('port'), function() {

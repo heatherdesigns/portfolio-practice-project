@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production'){
   app.get('/', function(request, response) {
 
     // ejs render automatically looks in the view folder
-    response.render('index.ejs');
+    response.render('index');
   });
 
   app.listen(port, function() {

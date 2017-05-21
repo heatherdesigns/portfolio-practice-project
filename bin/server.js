@@ -9,17 +9,17 @@ const app = express();
 
 if (process.env.NODE_ENV === 'production'){
   // start production server???
-  app.set('port', (process.env.PORT || 5000));
+  //app.set('port', (process.env.PORT || 5000));
 
-  app.use(express.static(__dirname + '/public'));
+  //app.use(express.static(__dirname + '/public'));
 
   app.get('/', function(request, response) {
-    response.render('index');
+    response.render('index.html');
   });
 
-  app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
-  });
+  // app.listen(app.get('port'), function() {
+  //   console.log('Node app is running on port', app.get('port'));
+  // });
 }
 else {
   // start development server to watch and update html and css files

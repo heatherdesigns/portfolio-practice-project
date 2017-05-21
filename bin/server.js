@@ -7,7 +7,7 @@ const browser = require('browser-sync');
 const express = require('express');
 const app = express();
 
-if (process.env.NODE_ENV == 'production'){
+if (NODE_ENV === 'production'){
   // start production server...................
   console.log("You have accessed the production server.");
   // set the port of the application

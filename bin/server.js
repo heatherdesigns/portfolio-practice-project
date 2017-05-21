@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production'){
   const port = process.env.PORT || 5000;
 
   // set the view engine to ejs
-  app.set('views', __dirname + '/views');
+  //app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
 
   // make epress look in the public directory for assets

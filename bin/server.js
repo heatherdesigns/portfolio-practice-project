@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
+  app.set('views', index.html)
   app.set('view engine', 'ejs');
 
   // make epress look in the public directory for assets

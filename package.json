@@ -11,7 +11,7 @@
     "build3-css:production": "NODE_ENV=production npm run build3-css",
     "postcss": "postcss -u autoprefixer -r public/css/main.css",
     "watch-css": "node bin/watch-css.js",
-    "start:server": "node bin/server.js"
+    "start": "node bin/server.js"
   },
   "author": "heather taylor",
   "license": "ISC",

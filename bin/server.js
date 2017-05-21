@@ -8,7 +8,8 @@ const express = require('express');
 const app = express();
 
 if (process.env.NODE_ENV === 'production'){
-  // start production server???
+  // start production server...................
+  console.log("You have accessed the production server.");
   // set the port of the application
   // process.env.PORT lets the port be set by Heroku
   const port = process.env.PORT || 8080;

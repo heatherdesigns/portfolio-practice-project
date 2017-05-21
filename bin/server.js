@@ -4,8 +4,18 @@ const shell = require('shelljs');
 const browser = require('browser-sync');
 //const change = require('onchange');
 
+const express = require('express');
+const app = express();
+
 if (process.env.NODE_ENV === 'production'){
-  // start production server
+  // start production server???
+  app.set('port', (process.env.PORT || 5000));
+
+  app.use(express.static(__dirname + '/public'));
+
+  app.get('/', function(request, response) {
+    response.render('index');
+  });
 }
 else {
   // start development server to watch and update html and css files

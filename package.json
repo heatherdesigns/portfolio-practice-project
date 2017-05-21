@@ -22,5 +22,8 @@
     "nodemon": "^1.11.0",
     "onchange": "^3.2.1",
     "postcss-cli": "^4.0.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
   }
 }

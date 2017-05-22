@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production'){
   // make express look in the public directory for assets
   console.log('PWD', path.join(__dirname, '..', 'public'));
   //app.use(express.static(__dirname + '../public'));
-  app.use(express.statid(path.join(__dirname, '..', 'public')));
+  app.use(express.static(path.join(__dirname, '..', 'public')));
 
   //
   // // set the view engine to ejs

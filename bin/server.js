@@ -1,12 +1,11 @@
 'use strict';
 
 const shell = require('shelljs');
-const browser = require('browser-sync');
 
 const express = require('express');
-const ejs = require('ejs');
+//const ejs = require('ejs');
 const app = express();
-const path = require('path');
+//const path = require('path');
 
 if (process.env.NODE_ENV === 'production'){
   // start production server...................
@@ -21,9 +20,6 @@ if (process.env.NODE_ENV === 'production'){
 
   // get HTML   __dirname, bin, public
   app.use(express.static(path.join(__dirname, '..')));
-
-  // get CSS    __dirname, bin, public, css
-  //app.use(express.static(path.join(__dirname, '..', 'public/css')));
 
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);

@@ -4,6 +4,7 @@ const shell = require('shelljs');
 const browser = require('browser-sync');
 
 const express = require('express');
+const ejs = require('ejs');
 const app = express();
 
 if (process.env.NODE_ENV === 'production'){
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
-  //app.set('views', __dirname + '/public');
+  app.set('views', __dirname + '/public');
   app.engine('html', ejs.renderFile);
   app.set('view engine', 'html');
 

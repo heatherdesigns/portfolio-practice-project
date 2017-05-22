@@ -19,9 +19,9 @@ if (process.env.NODE_ENV === 'production'){
   console.log('PWD', path.join(__dirname, '..', 'public'));
   //app.use(express.static(__dirname + '../public'));
   // get HTML   __dirname, bin, public
-  app.use(express.static(path.join(__dirname, '..', 'public')));
+  //app.use(express.static(path.join(__dirname, '..', 'public')));
   // get CSS    __dirname, bin, public, css
-  //app.use(express.static(path.join(__dirname, '..', '..', 'public')));
+  app.use(express.static(path.join(__dirname, '..', '..', 'public')));
 
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);

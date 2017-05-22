@@ -5,10 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass scss/main.scss public/css/main.css",
-    "build2-css": "node bin/build-css.js",
-    "build3-css": "node bin/build-css-again.js",
-    "build3-css:production": "NODE_ENV=production npm run build3-css",
+    "build-css": "node bin/build-css-again.js",
+    "build-css:production": "NODE_ENV=production npm run build-css",
     "postcss": "postcss -u autoprefixer -r public/css/main.css",
     "watch-css": "node bin/watch-css.js",
     "start": "node bin/server.js"

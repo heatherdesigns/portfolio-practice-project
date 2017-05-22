@@ -2,7 +2,6 @@
 
 const shell = require('shelljs');
 const browser = require('browser-sync');
-//const change = require('onchange');
 
 const express = require('express');
 const app = express();
@@ -16,16 +15,18 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
+  app.set('views', __dirname + '/public');
+  app.engine('html', ejs.rendFile);
+  app.set('view engine', 'html');
 
   // make epress look in the public directory for assets
   app.use(express.static(__dirname + '/public'));
 
   //set the home page route
   app.get('/', function(request, response) {
-
     // ejs render automatically looks in the view folder
-    response.render('index');
+    //response.render('index');
+    response.render('index.html');
   });
 
   app.listen(port, function() {

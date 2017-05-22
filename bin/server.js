@@ -17,11 +17,13 @@ if (process.env.NODE_ENV === 'production'){
 
   // make express look in the public directory for assets
   console.log('PWD', path.join(__dirname, '..', 'public'));
-  //app.use(express.static(__dirname + '../public'));
+  console.log('PWD', path.join(__dirname, '..'));
+
   // get HTML   __dirname, bin, public
-  //app.use(express.static(path.join(__dirname, '..', 'public')));
+  app.use(express.static(path.join(__dirname, '..')));
+
   // get CSS    __dirname, bin, public, css
-  app.use(express.static(path.join(__dirname, '../..', 'public')));
+  //app.use(express.static(path.join(__dirname, '..', 'public/css')));
 
   app.listen(port, function() {
     console.log("Our app is running on http://localhost:" + port);

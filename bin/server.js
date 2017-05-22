@@ -13,14 +13,14 @@ if (process.env.NODE_ENV === 'production'){
   // process.env.PORT lets the port be set by Heroku
   const port = process.env.PORT || 5000;
 
+  // make epress look in the public directory for assets
+  app.use(express.static(__dirname + '/public'));
+
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
   app.set('views', __dirname + '/public');
-  app.engine('html', ejs.rendFile);
+  app.engine('html', ejs.renderFile);
   app.set('view engine', 'html');
-
-  // make epress look in the public directory for assets
-  app.use(express.static(__dirname + '/public'));
 
   //set the home page route
   app.get('/', function(request, response) {

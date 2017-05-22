@@ -19,15 +19,15 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
-  //app.set('views', __dirname + '/public');
+  app.set('views', __dirname + '/public');
   app.engine('html', ejs.renderFile);
   app.set('view engine', 'html');
 
   //set the home page route
   app.get('/', function(request, response) {
     // ejs render automatically looks in the view folder
-    //response.render('index');
-    response.render('/index.html');
+    //response.render('index');  used when when referenceing index.js file
+    response.render('index.html');
   });
 
   app.listen(port, function() {

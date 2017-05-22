@@ -5,7 +5,7 @@ const shell = require('shelljs');
 const express = require('express');
 //const ejs = require('ejs');
 const app = express();
-//const path = require('path');
+const path = require('path');
 
 if (process.env.NODE_ENV === 'production'){
   // start production server...................

@@ -10,7 +10,7 @@
     "postcss": "postcss -u autoprefixer -r public/css/main.css",
     "watch-css": "node bin/watch-css.js",
     "server": "node bin/server.js",
-    "start": "npm-run-all watch-css server"
+    "start": "npm-run-all -p watch-css server"
   },
   "author": "heather taylor",
   "license": "ISC",

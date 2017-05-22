@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production'){
 
   // set the view engine to ejs
   //app.set('views', __dirname + '/views');
-  app.set('views', __dirname + '/public');
+  //app.set('views', __dirname + '/public');
   app.engine('html', ejs.renderFile);
   app.set('view engine', 'html');
 

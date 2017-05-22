@@ -1,9 +1,6 @@
 'use strict';
 
-const sass = require('node-sass');
 const shell = require('shelljs');
-const postcss = require('postcss');
-const autofix = require('autoprefixer');
 
 // compile CSS (compressed for production and expanded for development)
 if (process.env.NODE_ENV === 'production'){

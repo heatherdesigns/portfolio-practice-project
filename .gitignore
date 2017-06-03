@@ -6,6 +6,3 @@ node_modules/
 *.dev
 *.sass-cache
 .DS_Store
-
-# testing
-public/html/index.html

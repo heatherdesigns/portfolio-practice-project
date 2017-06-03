@@ -19,6 +19,7 @@ if (process.env.NODE_ENV === 'production'){
   console.log('PWD', path.join(__dirname, '..'));
 
   // get HTML   __dirname, bin, public
+  app.use(express.static(path.join(__dirname, '../public')));
   app.use(express.static(path.join(__dirname, '..')));
 
   app.listen(port, function() {
@@ -29,5 +30,5 @@ if (process.env.NODE_ENV === 'production'){
 else {
   // start development server to watch and update html and css files
   console.log("You have accessed the development server.");
-  shell.exec("browser-sync start --server --files 'public/css/*.css, *.html'");
+  shell.exec("browser-sync start --server --index 'public/index.html' --files 'public/css/*.css, public/html/*.html'");
 }
